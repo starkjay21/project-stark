@@ -1,6 +1,6 @@
 package LinkedList;
 /*
-* Author: Jayesh Nayak (121CS0195)
+* Author: Jayesh Nayak
 *
 * */
 class LinkedList
@@ -177,12 +177,10 @@ class LinkedList
     }
     //Reverses the LinkedList
     public void reverse() {
-        if(head == null){
+        if(head == null || head.next == null){
             return;
         }
-        if(head.next == null){
-            return;
-        }
+
         ListNode temp = head;
         ListNode temp1= head.next, temp2= temp1.next;
         // 2   6   5   10  8   7   null
@@ -259,8 +257,6 @@ class LinkedList
         list.printList();
         list.deleteList();
     }
-
-
 }
 
 
